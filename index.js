@@ -3,7 +3,7 @@ const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(expressLayouts);
@@ -16,4 +16,4 @@ app.get('/', (req, res) =>
 app.get('/inbox', (req, res) => res.render('inbox', { active: ['fal', 'fas', 'fal', 'fal', 'fal'] }));
 app.get('/explore', (req, res) => res.render('explore', { active: ['fal', 'fal', 'fal', 'fas', 'fal'] }));
 
-app.listen(port, () => console.log(`http://localhost:${port}`));
+app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
