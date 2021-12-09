@@ -1,0 +1,16 @@
+<div class="explore">
+  <div class="explore__search-bar">
+    <div class='explore__search-box'>
+      <i class="fal fa-search"></i><span>Search</span>
+    </div>
+  </div>
+  <div class='explore__grid'>
+    <% for( let i = 1; i <= 15; i++ ) { 
+        let n = i < 10 ? '0'+i : i
+    %>
+      <a href="" class='explore__item'> 
+        <img src="./images/discover<%= n %>.jpg" alt="" class='explore__img'>
+      </a>
+    <% } %>
+  </div>
+</div>

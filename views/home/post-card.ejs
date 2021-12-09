@@ -1,0 +1,83 @@
+<div class="post-card">
+  <div class="post-card__header">
+    <div class="post-card__avt">
+      <img src="<%= avatar %>" alt="" class="avatar avatar-sm" />
+    </div>
+
+    <div class="post-card__info">
+      <a href="" class="username"><%= username %> </a>
+      <% if (typeof location !== 'undefined') { %>
+        <a href="" class="text text-sm"><%= location %> </a>
+      <% } %>
+    </div>
+
+    <button class="post-card__menu-btn">
+      <i class="fal fa-ellipsis-h"></i>
+    </button>
+  </div>
+
+  <div class="post-card__media">
+    <% if (typeof image !== 'undefined') { %>
+      <img src="<%= image %> " alt="" class="postcard__img" />
+    <% } %>
+    
+    <% if (typeof video !== 'undefined') { %> 
+      <div class="post-card__video">
+        <video muted loop width="100%">
+          <source src="<%= video %> " type="video/mp4" />
+        </video>
+        <button class="post-card__played-btn">
+          <i class="fas fa-play"></i>
+        </button>
+        <i class="post-card__muted-btn fal fa-volume-slash"></i>
+      </div>
+    <% } %> 
+  </div>
+
+  <div class="post-card__body">
+    <div class="post-card__action">
+      <i class="post-card__like-btn fal fa-heart"></i>
+      <i class="fal fa-comment"></i>
+      <i class="fal fa-paper-plane"></i>
+      <i class="fal fa-bookmark"></i>
+    </div>
+
+    <div class="post-card__liked">
+      <a href="" class="post-card__others">
+        <img src="./images/avt-mu.jpg" alt="" class="avatar avatar-xs" />
+      </a>
+      <span class="text"
+        >Liked by <a href="" class="username">manchesterunited</a> and
+        <a href="" class="username" class="post-card__others">others</a></span
+      >
+    </div>
+
+    <div class="post-card__caption text">
+      <a href="" class="username">premierleague </a> Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Suscipit ducimus repudiandae quia cumque
+    </div>
+    <a href="" class="text text-gray">View all 3 comments</a>
+    <div class="post-card__comments">
+      <div class="post-card__comments-item">
+        <span class="text"
+          ><a href="" class="username">championsleague</a> Delen ducimus
+          quibusdam natus quasi autem!</span
+        >
+        <i class="fal fa-heart"></i>
+      </div>
+    </div>
+    <a href="" class="text text-xs text-uppercase">1 hour ago</a>
+  </div>
+
+  <div class="post-card__footer">
+    <form class="post-card__comment-form">
+      <i class="post-card__emoji-btn fal fa-smile"></i>
+      <input
+        type="text"
+        class="post-card__comment-input"
+        placeholder="Add a comment..."
+      />
+      <button class="post-card__comment-submit">Post</button>
+    </form>
+  </div>
+</div>

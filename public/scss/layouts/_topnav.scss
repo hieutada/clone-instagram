@@ -1,0 +1,151 @@
+.topnav {
+  border-bottom: thin solid #ccc;
+  position: sticky;
+  top: 0;
+  background-color: $white-color;
+  z-index: 99;
+
+  &__wrapper {
+    display: flex;
+    position: relative;
+    height: 6rem;
+  }
+
+  &__wrapper,
+  &__mobile {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__mobile {
+    height: 5.4rem;
+    display: none;
+    font-size: 2.4rem;
+    cursor: pointer;
+  }
+
+  @include maxWidth(767px) {
+    &__wrapper {
+      display: none;
+    }
+
+    &__mobile {
+      display: flex;
+    }
+  }
+
+  &__logo {
+    transform: translateY(0.4rem);
+  }
+
+  &__input {
+    line-height: 2.4;
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 26.8rem;
+    border: thin solid $gray-light-color;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:first-child) {
+      margin-left: 2.2rem;
+    }
+  }
+
+  &__item-link i {
+    font-size: 2.4rem;
+  }
+
+  &__activity {
+    $activity-brigde: 1.6rem;
+
+    position: absolute;
+    top: calc(100% + $activity-brigde);
+    right: -200%;
+    height: 36.4rem;
+    width: 50rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.4rem rgba($gray-color, 0.4);
+    z-index: 98;
+    display: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -$activity-brigde;
+      right: 0;
+      width: 100%;
+      height: $activity-brigde;
+      background-color: transparent;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+
+      top: 0.1rem;
+      right: 5.4rem;
+
+      border: 0.6rem solid transparent;
+      border-color: $white-color $white-color transparent transparent;
+      -ms-transform: translateY(-50%) rotate(-45deg); /* IE 9 */
+      transform: translateY(-50%) rotate(-45deg);
+
+      box-shadow: inherit;
+    }
+
+    &-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $white-color;
+      border-radius: inherit;
+      overflow-y: auto;
+      z-index: 99;
+    }
+  }
+}
+
+.activity:hover .topnav__activity {
+  display: block;
+}
+
+.activity-heading {
+  font-weight: 500;
+  padding: 1.2rem 1.2rem 0;
+}
+
+.activity-list {
+}
+
+.activity-item {
+  padding: 1.2rem 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.activity-link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.activity-content {
+  @include textClamp(2);
+  line-height: 1.4;
+  margin: 0 1.2rem;
+}

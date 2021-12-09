@@ -1,0 +1,75 @@
+.container {
+  max-width: 97.6rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: auto;
+}
+
+.avatar {
+  border: thin solid $gray-light-color;
+  border-radius: 50%;
+  object-fit: cover;
+  @include size(5.6rem);
+  
+  &-xl {
+    @include size(15rem);
+  }
+  
+  &-lg {
+    @include size(5.6rem);
+  }
+
+  &-md {
+    @include size(4.4rem);
+  }
+
+  &-sm {
+    @include size(3.2rem);
+  }
+
+  &-xs {
+    @include size(2.4rem);
+  }
+
+  &-story {
+    border: none;
+    // transform: scale(1.1);
+
+    padding: 0.2rem;
+    background-clip: padding-box;
+
+    background: #833ab4; /* fallback for old browsers */
+
+    background: -webkit-linear-gradient(
+      to top right,
+      #fcb045,
+      #fd1d1d,
+      #833ab4
+    ); /* Chrome 10-25, Safari 5.1-6 */
+
+    background: linear-gradient(
+      to top right,
+      #fcb045,
+      #fd1d1d,
+      #833ab4
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+
+  &-primary {
+    background-color: $blue-color;
+    color: $white-color;
+  }
+
+  &-outline {
+    border: thin solid black;
+    color: black;
+  }
+}

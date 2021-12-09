@@ -1,0 +1,118 @@
+<div class="home">
+  <!-- Left Column -->
+  <div class="home__news">
+    <%- include('./story-slider') %>
+
+    <!-- Post List -->
+    <div class="post-list">
+      
+      <%- include('./post-card', {
+        username: 'premierleague',
+        avatar: './images/avt-epl.jpg',
+        image: './images/post-epl.jpg',
+      }); %>
+
+      <%- include('./post-card', {
+        username: 'alanwalkermusic',
+        avatar: './images/avt-alan.jpg',
+        video: './videos/video-alan.mp4',
+      }); %>
+
+      <%- include('./post-card', {
+        username: 'alicasmd',
+        location: 'Berlin',
+        avatar: './images/avt-alica.jpg',
+        image: './images/post-alica.jpg',
+      }); %>
+
+      <%- include('./post-card', {
+        username: 'manchesterunited',
+        avatar: './images/avt-mu.jpg',
+        video: './videos/video-mu.mp4',
+      }); %>
+    </div>
+  </div>
+
+  <!-- Right Column -->
+  <div class="home__aside">
+    <div class="home__aside-wrapper">
+      <div class="home__current-user">
+        <img src="./images/avt-user.jpg" alt="" class="avatar avatar-lg" />
+        <div class="home__user-info">
+          <a href="" class="username">hieupisce</a>
+          <div class="text text-gray">Ta Trung Hiếu</div>
+        </div>
+        <button class="text text-sm text-blue">Switch</button>
+      </div>
+
+      <div class="home__suggest">
+        <div class="home__suggest-heading">
+          <span class="text text-gray">Suggestions For You</span>
+          <button class="text text-sm">See All</button>
+        </div>
+
+        <ul class="home__suggest-list">
+          <li class="home__suggest-item">
+            <a href="">
+              <img
+                src="./images/avt-dybala.jpg"
+                alt=""
+                class="user-card__img avatar avatar-sm"
+              />
+            </a>
+            <div class="home__suggest-info">
+              <a href="" class="username">dybala</a>
+              <div class="text text-sm text-gray">Suggested for you</div>
+            </div>
+            <button class="text text-sm text-blue">Follow</button>
+          </li>
+
+          <li class="home__suggest-item">
+            <a href="">
+              <img
+                src="./images/avt-pitbull.jpg"
+                alt=""
+                class="user-card__img avatar avatar-sm"
+              />
+            </a>
+            <div class="home__suggest-info">
+              <a href="" class="username">pitbull.wow</a>
+              <div class="text text-sm text-gray">Suggested for you</div>
+            </div>
+            <button class="text text-sm text-blue">Follow</button>
+          </li>
+
+          <li class="home__suggest-item">
+            <a href="">
+              <img
+                src="./images/avt-bts.jpg"
+                alt=""
+                class="user-card__img avatar avatar-sm"
+              />
+            </a>
+            <div class="home__suggest-info">
+              <a href="" class="username">world.bts</a>
+              <div class="text text-sm text-gray">Suggested for you</div>
+            </div>
+            <button class="text text-sm text-blue">Follow</button>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="home__contact">
+        <li><a href="">About</a></li>
+        <li><a href="">Help</a></li>
+        <li><a href="">Press</a></li>
+        <li><a href="">API</a></li>
+        <li><a href="">Jobs</a></li>
+        <li><a href="">Privacy</a></li>
+        <li><a href="">Terms</a></li>
+        <li><a href="">Loactions</a></li>
+        <li><a href="">Top Accounts</a></li>
+        <li><a href="">Hastag</a></li>
+        <li><a href="">Language</a></li>
+        <li>© 2021 Instagram from Meta</li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+.botnav {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2.4rem;
+  background-color: $white-color;
+  padding: 1rem 0;
+  border-top: thin solid $gray-light-color;
+
+  * {
+    cursor: pointer;
+  }
+
+  @include maxWidth(767px) {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}

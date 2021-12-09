@@ -1,0 +1,63 @@
+.story-slider {
+  margin-top: 3.4rem;
+  background-color: white;
+  padding: 1.8rem 0;
+  border: thin solid $gray-light-color;
+  border-radius: 0.3rem;
+  display: flex;
+
+  @include maxWidth(767px) {
+    margin-top: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  &__item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  &__username {
+    margin-top: 1rem;
+
+    span {
+      @include textClamp(1);
+      font-size: 1.2rem;
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+    }
+  }
+
+  .slick-slide {
+    display: flex;
+  }
+
+  .slick-prev {
+    left: 1.2rem;
+  }
+  
+  .slick-next {
+    right: 1.2rem;
+  }
+  
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    font-size: 2.4rem;
+    color: $gray-light-color;
+    opacity: 0.8;
+    * {
+      border-radius: 50%;
+      box-shadow: 0 0 1.2rem #888888;
+    }
+  }
+}
+
+
+
+

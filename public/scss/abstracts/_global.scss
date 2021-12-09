@@ -1,0 +1,29 @@
+body {
+  font-family: $primary-font;
+  list-style: 1;
+  color: $black-color;
+  font-size: 1.4rem;
+  background-color: $snow-color;
+}
+
+a {
+  text-decoration: none;
+  color: $black-color;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input, button {
+  font-family: $primary-font;
+  list-style: 1;
+  outline: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}

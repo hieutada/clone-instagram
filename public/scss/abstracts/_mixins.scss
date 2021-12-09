@@ -1,0 +1,39 @@
+@mixin size($width: 100%, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// Flexbox
+@mixin flexbox(
+  $align-items: stretch,
+  $justify-content: flex-start,
+  $direction: row,
+  $display: flex,
+  $wrap: nowrap
+) {
+  display: $display;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+// text clamp
+@mixin textClamp($rows: 1, $size: 100%) {
+  display: -webkit-box;
+  -webkit-line-clamp: $rows;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: $size;
+  max-width: $size;
+  white-space: pre-wrap;
+  word-break: break-word; // rot theo tu
+}
+
+// mixin maxWidth($breakpoint){@content}
+@mixin maxWidth($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
