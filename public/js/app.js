@@ -11,6 +11,7 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 5,
           slidesToScroll: 5,
+          arrows: false,
         },
       },
       {

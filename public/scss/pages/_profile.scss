@@ -217,11 +217,14 @@
     --item-gap: 0.2rem;
   }
 
+  &__contents {
+    overflow: hidden;
+  }
+
   &__post-list {
     display: flex;
     flex-wrap: wrap;
-    margin-right: calc(-1 * var(--item-gap));
-    margin-bottom: calc(-1 * var(--item-gap));
+    margin-right: calc(var(--item-gap) * -1);
   }
 
   &__post-item {

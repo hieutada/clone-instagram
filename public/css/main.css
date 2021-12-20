@@ -42,6 +42,7 @@ a.username:hover {
 .username {
   font-weight: 500;
   position: relative;
+  line-height: 1.4;
 }
 .username-sm {
   font-size: 1.2rem;
@@ -1139,11 +1140,13 @@ a.username:hover {
     --item-gap: 0.2rem;
   }
 }
+.profile__contents {
+  overflow: hidden;
+}
 .profile__post-list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: calc(-1 * var(--item-gap));
-  margin-bottom: calc(-1 * var(--item-gap));
+  margin-right: calc(var(--item-gap) * -1);
 }
 .profile__post-item {
   width: calc(33.3333333333% - var(--item-gap));
