@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Instagram</title>
+  
+  <link rel="shortcut icon" href="#">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,8 +41,8 @@
               <i class="<%= typeof active != 'undefined' ? active[1] : 'fal' %> fa-inbox"></i>
             </a>
           </li>
-          <li class="topnav__item">
-            <a href="" class="topnav__item-link">
+          <li class="topnav__item new-post-modal__btn">
+            <a class="topnav__item-link">
               <i class="<%= typeof active != 'undefined' ? active[2] : 'fal' %> fa-plus-square"></i>
             </a>
           </li>
@@ -102,6 +104,10 @@
       <img src="./images/avt-user.jpg" alt="" class="avatar avatar-xs" />
     </a>
   </div>
+
+
+  <!-- MODAL -->
+  <%- include('./components/new-post-modal') %> 
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

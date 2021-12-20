@@ -31,20 +31,11 @@ function resetTextArea(element) {
 
 const videoObjects = document.getElementsByClassName('post-card__video');
 const videoList = Object.values(videoObjects);
-const isInViewport = function (elem) {
-  const bounding = elem.getBoundingClientRect();
-  return (
-    bounding.top >= 0 &&
-    bounding.left >= 0 &&
-    bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth)
-  );
-};
+
 videoList.forEach((element) => {
   const playBtn = element.querySelector('.post-card__played-btn');
   const mutedBtn = element.querySelector('.post-card__muted-btn');
+  const mutedIcon = element.querySelector('.post-card__muted-icon');
   const video = element.querySelector('video');
 
   [video, playBtn].forEach((e) => {
@@ -60,18 +51,17 @@ videoList.forEach((element) => {
     });
   });
 
-  
   mutedBtn.addEventListener('click', () => {
     video.muted = !video.muted;
     if (video.muted) {
-      mutedBtn.classList.remove('fa-volume-up');
-      mutedBtn.classList.add('fa-volume-slash');
+      mutedIcon.classList.remove('fa-volume-up');
+      mutedIcon.classList.add('fa-volume-slash');
     } else {
-      mutedBtn.classList.remove('fa-volume-slash');
-      mutedBtn.classList.add('fa-volume-up');
+      mutedIcon.classList.remove('fa-volume-slash');
+      mutedIcon.classList.add('fa-volume-up');
     }
 
-    document.querySelectorAll('video')
+    document.querySelectorAll('video');
   });
 });
 
@@ -82,3 +72,22 @@ const explorebar = document.querySelector('.explore__search-bar');
 if (chatbar || explorebar) {
   topnavMobile.style.display = 'none';
 }
+
+// modal
+const newPostModalBtn = document.querySelector('.new-post-modal__btn');
+const newPostModal = document.querySelector('.new-post-modal');
+const newPostModalClose = document.querySelector('.new-post-close');
+
+newPostModalBtn.addEventListener('click', () => {
+  newPostModal.style.display = 'block';
+});
+
+newPostModalClose.onclick = () => {
+  newPostModal.style.display = 'none';
+};
+
+window.onclick = (event) => {
+  if (event.target == newPostModal) {
+    newPostModal.style.display = 'none';
+  }
+};

@@ -22,9 +22,6 @@
   }
 
   &__media {
-    * {
-      margin: 0 auto;
-    }
   }
 
   &__menu-btn {
@@ -120,6 +117,10 @@
   &__video {
     position: relative;
     cursor: pointer;
+
+    > video {
+      width: 100%;
+    }
   }
 
   &__played-btn {
@@ -135,11 +136,24 @@
 
   &__muted-btn {
     position: absolute;
-    bottom: 2.4rem;
-    right: 2.4rem;
-    color: $white-color;
+    bottom: 0;
+    right: 0;
+    width: 4.4rem;
+    height: 4.4rem;
     cursor: pointer;
-    opacity: 0.7;
-    font-size: 1.6rem;
+  }
+  
+  &__muted-wrapper {
+    background-color: rgba(black, 0.5);
+    color: $white-color;
+
+    font-size: 1.3rem;
+    height: 2.8rem;
+    width: 2.8rem;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
