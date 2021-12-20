@@ -1,0 +1,90 @@
+<div class="profile">
+  <div class="profile__header">
+    <div class="profile__avatar">
+      <img src="./images/avt-user.jpg" alt="" />
+    </div>
+    <div class="profile__info">
+      <div class="profile__heading">
+        <span class="profile__username">hieupisce</span>
+        <a href="/accounts/edit" class="profile__edit btn btn-outline"
+          >Edit Profile</a
+        >
+        <button class="profile__setting"><i class="fal fa-cog"></i></button>
+      </div>
+      <ul class="profile__overview">
+        <li><span class="text text-bold">22</span> posts</li>
+        <li><span class="text text-bold">333</span> followers</li>
+        <li><span class="text text-bold">22</span> following</li>
+      </ul>
+      <ul class="profile__desc">
+        <li class="profile__fullname">Ta Trung Hieu</li>
+        <li class="profile__bio">Frontend Developer</li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/hieupisce/"
+            class="profile__other-link"
+            >linkedin.com/in/hieupisce</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <ul class="profile__desc profile__desc--mobile">
+    <li class="profile__fullname">Ta Trung Hieu</li>
+    <li class="profile__bio">Frontend Developer</li>
+    <li>
+      <a
+        href="https://www.linkedin.com/in/hieupisce/"
+        class="profile__other-link"
+        >linkedin.com/in/hieupisce</a
+      >
+    </li>
+  </ul>
+
+  <ul class="profile__overview profile__overview--mobile">
+    <li><span class="text text-bold">22</span><span>posts</span></li>
+    <li><span class="text text-bold">333</span><span>followers</span></li>
+    <li><span class="text text-bold">22</span><span>following</span></li>
+  </ul>
+
+  <ul class="profile__navtabs">
+    <li class="profile__tab profile__tab--active">
+      <i class="fal fa-th"></i>
+      <span class="profile__tab-title">Posts</span>
+    </li>
+    <li class="profile__tab profile__tab--mobile">
+      <i class="fal fa-bars"></i>
+    </li>
+    <li class="profile__tab">
+      <i class="fal fa-play-circle"></i>
+      <span class="profile__tab-title">Reels</span>
+    </li>
+    <li class="profile__tab">
+      <i class="fal fa-bookmark"></i>
+      <span class="profile__tab-title">Saved</span>
+    </li>
+    <li class="profile__tab">
+      <i class="fal fa-user-tag"></i>
+      <span class="profile__tab-title">Tagged</span>
+    </li>
+  </ul>
+
+  <div class="profile__contents">
+    <div class="profile__post-list">
+      <% for( let i = 1; i <= 12; i++ ) { %>
+      <div class="profile__post-item">
+        <img src="./images/post-<%= i < 10 ? `0${i}` : i  %>.jpg" alt="" />
+        <div class="profile__post-overlay">
+          <div class="profile__post-review">
+            <i class="fas fa-heart"></i><span>111</span>
+          </div>
+          <div class="profile__post-review">
+            <i class="fas fa-comment"></i><span>99</span>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>

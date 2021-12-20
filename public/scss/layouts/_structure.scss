@@ -61,7 +61,6 @@
   padding: 0.6rem 1rem;
   border-radius: 0.5rem;
   font-weight: 500;
-  font-size: 1.3rem;
 
   &-primary {
     background-color: $blue-color;
@@ -69,7 +68,7 @@
   }
 
   &-outline {
-    border: thin solid black;
+    border: thin solid $gray-light-color;
     color: black;
   }
 }

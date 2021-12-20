@@ -43,18 +43,17 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2.8rem;
     grid-template-areas:
-      "h1 h2 h3"
-      "h4 h4 h5"
-      "h4 h4 h6"
-      "h7 h8 h9"
-      "h10 h12 h12"
-      "h11 h12 h12"
-      "h13 h14 h15";
-  
+      'h1 h2 h3'
+      'h4 h4 h5'
+      'h4 h4 h6'
+      'h7 h8 h9'
+      'h10 h12 h12'
+      'h11 h12 h12'
+      'h13 h14 h15';
+
     @include maxWidth(767px) {
       gap: 0.2rem;
-    margin: 0 -2rem 4.5rem;
-
+      margin: 0 -2rem 4.5rem;
     }
   }
 

@@ -1,117 +1,112 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Instagram</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram</title>
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/fontawesome.css" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
-  <body>
-    <nav class="topnav">
-      <div class="container">
-        <!-- topnav pc -->
-        <div class="topnav__wrapper">
-          <a href="/">
-            <img class="topnav__logo" src="./images/insta_logo.png" alt="" />
-          </a>
-          <input class="topnav__input" type="text" placeholder="Search" />
-          <ul class="topnav__list">
-            <li class="topnav__item">
-              <a href="/" class="topnav__item-link">
-                <i class="<%= active[0] %> fa-home-lg-alt"></i>
-              </a>
-            </li>
-            <li class="topnav__item">
-              <a href="/inbox" class="topnav__item-link">
-                <i class="<%= active[1] %> fa-inbox"></i>
-              </a>
-            </li>
-            <li class="topnav__item">
-              <a href="" class="topnav__item-link">
-                <i class="<%= active[2] %> fa-plus-square"></i>
-              </a>
-            </li>
-            <li class="topnav__item">
-              <a href="/explore" class="topnav__item-link">
-                <i class="<%= active[3] %> fa-compass"></i>
-              </a>
-            </li>
-            <li class="topnav__item activity">
-              <a href="" onclick="return false;" class="topnav__item-link">
-                <i class="<%= active[4] %> fa-heart"></i>
-              </a>
-              <div class="topnav__activity">
-                <div class="topnav__activity-wrapper">
-                  <%- include('./components/activity-dropdown.ejs') %>
-                </div>
+  <link rel="stylesheet" href="css/fontawesome.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <nav class="topnav">
+    <div class="container">
+      <!-- topnav pc -->
+      <div class="topnav__wrapper">
+        <a href="/">
+          <img class="topnav__logo" src="./images/insta_logo.png" alt="" />
+        </a>
+        <input class="topnav__input" type="text" placeholder="Search" />
+        <ul class="topnav__list">
+          <li class="topnav__item">
+            <a href="/" class="topnav__item-link">
+              <i class="<%= typeof active != 'undefined' ? active[0] : 'fal' %> fa-home-lg-alt"></i>
+            </a>
+          </li>
+          <li class="topnav__item">
+            <a href="/inbox" class="topnav__item-link">
+              <i class="<%= typeof active != 'undefined' ? active[1] : 'fal' %> fa-inbox"></i>
+            </a>
+          </li>
+          <li class="topnav__item">
+            <a href="" class="topnav__item-link">
+              <i class="<%= typeof active != 'undefined' ? active[2] : 'fal' %> fa-plus-square"></i>
+            </a>
+          </li>
+          <li class="topnav__item">
+            <a href="/explore" class="topnav__item-link">
+              <i class="<%= typeof active != 'undefined' ? active[3] : 'fal' %> fa-compass"></i>
+            </a>
+          </li>
+          <li class="topnav__item activity">
+            <a href="" onclick="return false;" class="topnav__item-link">
+              <i class="<%= typeof active != 'undefined' ? active[4] : 'fal' %> fa-heart"></i>
+            </a>
+            <div class="topnav__activity">
+              <div class="topnav__activity-wrapper">
+                <%- include('./components/activity-dropdown.ejs') %>
               </div>
-            </li>
-            <li class="topnav__item">
-              <a href="">
-                <img
-                  src="./images/avt-user.jpg"
-                  alt=""
-                  class="avatar avatar-xs"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- topnav mobile -->
-        <div class="topnav__mobile">
-          <i class="fal fa-camera"></i>
-          <a href="/">
-            <img class="topnav__logo" src="./images/insta_logo.png" alt="" />
-          </a>
-          <a href="/inbox" class="fal fa-inbox"></a>
-        </div>
+            </div>
+          </li>
+          <li class="topnav__item">
+            <a href="/profile">
+              <img src="./images/avt-user.jpg" alt="" class="avatar avatar-xs" />
+            </a>
+            <div></div>
+          </li>
+        </ul>
       </div>
-    </nav>
 
-    <main class="main">
-      <div class="container"><%-body%></div>
-    </main>
-
-    <div class="botnav">
-      <i class="fas fa-home-lg-alt"></i>
-      <i class="fal fa-search"></i>
-      <i class="fal fa-plus-square"></i>
-      <i class="fal fa-heart"></i>
-      <img src="./images/avt-user.jpg" alt="" class="avatar avatar-xs" />
+      <!-- topnav mobile -->
+      <div class="topnav__mobile">
+        <i class="fal fa-camera"></i>
+        <a href="/">
+          <img class="topnav__logo" src="./images/insta_logo.png" alt="" />
+        </a>
+        <a href="/inbox" class="fal fa-inbox"></a>
+      </div>
     </div>
+  </nav>
 
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
-    <script src="./js/app.js"></script>
-  </body>
+  <main class="main">
+    <div class="container">
+      <%-body%>
+    </div>
+  </main>
+
+  <div class="botnav">
+    <a href="/">
+      <i class="<%= typeof active != 'undefined' ? active[0] : 'fal' %> fa-home-lg-alt"></i>
+    </a>
+    <a href="/explore">
+      <i class="<%= typeof active != 'undefined' ? active[3] : 'fal' %> fa-search"></i>
+    </a>
+    <a href="">
+      <i class="fal fa-plus-square"></i>
+    </a>
+    <a href="">
+      <i class="<%= typeof active != 'undefined' ? active[4] : 'fal' %> fa-heart"></i>
+    </a>
+    <a href="/profile">
+      <img src="./images/avt-user.jpg" alt="" class="avatar avatar-xs" />
+    </a>
+  </div>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
 </html>
